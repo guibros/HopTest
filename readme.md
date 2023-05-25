@@ -5,22 +5,43 @@ This README guide will help you implement internationalization (i18n) in your Ho
 ## Folder Structure and Resource Files
 
 1. Create an `i18n` folder at the same level as the the file that requires translation resources.
+ 
+![Here, files from the List folder are using translation resources from the i18n folder](https://github.com/guibros/HopTest/assets/116329812/629ccc32-7def-421c-9a0d-a585124fdc9c "Here files from the List folder are using translation resources from the i18n folder")
 
-2. Inside the `i18n` folder, add a "Content" file for each language you want to support. For example, create a file named `Content.resx` for the default language (e.g., English).
+
+
+2. Inside the `i18n` folder, add one "Content" file for each language you want to support.  Create the first file named `Content.resx` for the default language (e.g., English). 
+ 
+ ![Content files are put in the i18n folder. Here we have two files, one for neutral/english (Content.resx), and one for french (Content.fr.resx)](https://github.com/guibros/HopTest/assets/116329812/80a6d852-757b-48dc-8793-5cbbab8cc96d "Content files are put in the i18n folder.  Here we have two files, one for neutral/english (Content.resx), and one for french (Content.fr.resx)")
+
+
 
 3. To add a "Content" file, right-click on the `i18n` folder, select "Add" -> "New Item," and choose "Resource File (C# Items)". Name it `Content.resx`.
+<p align="center">
+<img width="520" alt="image" src="https://github.com/guibros/HopTest/assets/116329812/693714b2-ca9a-4b7f-9682-161f04cd7838">
+<img width="307" alt="image" src="https://github.com/guibros/HopTest/assets/116329812/8033fb4f-5f9f-4ae8-872d-5b6551e6d0d4">
+</p>
+
 
 4. Repeat step 3 for each additional language, but this time add the language suffix to the file name, such as `Content.fr.resx` for French, `Content.es.resx` for Spanish, etc.
 
 ## Using Resx Manager
 
 1. Right-click on the `Content.resx` file (the base/neutral file) and click on "Resx Manager".
+<img width="352" alt="image" src="https://github.com/guibros/HopTest/assets/116329812/103548f9-6d55-4f22-a0be-e4be5a8db1b7">
 
-2. In the Resx Manager window, you'll see columns. The "key" column represents the reference name used in your regular code.
 
-3. The "neutral" column is for the base string attached to the key.
 
-4. For each additional language (each additional `Content.XX.resx` file), a dedicated column will be available. In these columns, enter the translated equivalents for the base strings.
+2. In the Resx Manager window, you'll see columns.  The "key" column represents the reference name used in your regular code.
+![image](https://github.com/guibros/HopTest/assets/116329812/8dedd111-848c-4a5f-aca7-b0f19f8b7489 "Key column, neutral/english column and french column")
+
+
+3. The "neutral" column is for the base string attached to the key.  For each additional language (each additional `Content.XX.resx` file), a dedicated column will be available (Here, French column). 
+ 
+ 
+4. To add a keyword, press the white plus button.  Input in cameltoe a keyword corresponding with the words that will be translated. In the neutral and other columns, enter the strings equivalent corresponding to the different column languages.
+<img width="676" alt="image" src="https://github.com/guibros/HopTest/assets/116329812/82a84805-7256-4828-ae42-697b82702be9">
+
 
 ## Implementing Translation
 
