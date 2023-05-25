@@ -1,4 +1,4 @@
-# Internationalization (i18n) in Your Hop Application
+# Internationalization (i18n) in Hop Application
 
 This README guide will help you implement internationalization (i18n) in your Hop application, allowing you to localize your app's text in different languages.
 
@@ -39,7 +39,7 @@ This README guide will help you implement internationalization (i18n) in your Ho
 3. The "neutral" column is for the base string attached to the key.  For each additional language (each additional `Content.XX.resx` file), a dedicated column will be available (Here, French column). 
  
  
-4. To add a keyword, press the white plus button.  Input in cameltoe a keyword corresponding with the words that will be translated. In the neutral and other columns, enter the strings equivalent corresponding to the different column languages.
+4. To add a keyword, press the white plus button.  Input in camelcase a keyword corresponding with the words that will be translated. In the neutral and other columns, enter the strings equivalent corresponding to the different column languages.
 <img width="676" alt="image" src="https://github.com/guibros/HopTest/assets/116329812/82a84805-7256-4828-ae42-697b82702be9">
 
 
@@ -52,8 +52,13 @@ There are three ways to implement the translation process:
 Import the NameSpace associated with the current i18n path, for example :
 
 ``` xmlns:i18n="clr-namespace:Hop.Study.App.Views.Participants.Edit.i18n"```
+<p align="center">
+<img width="551" alt="image" src="https://github.com/guibros/HopTest/assets/116329812/ed766678-2d54-4b5c-ad5a-922b6a9d3409">
+<img width="230" alt="image" src="https://github.com/guibros/HopTest/assets/116329812/01a04fc5-2fd8-4ce9-ba1a-d87191509fe1">
+</p>
 
 Use the syntax `{Static i18n:Content.KeywordForTranslatedString}` to statically load the translation when the page or view is generated.
+<img width="475" alt="image" src="https://github.com/guibros/HopTest/assets/116329812/e07ffd27-470c-49fe-bf65-94d734f3b790">
 
 ### Dynamic Translation
 
@@ -61,11 +66,15 @@ Import the NameSpace:
 
 ``` xmlns:i18n="clr-namespace:Hop.Xamarin.Extensions.Localization;assembly=Hop.Xamarin” ```
 
+<img width="528" alt="image" src="https://github.com/guibros/HopTest/assets/116329812/ffac338e-a0dd-4c85-be46-5744e8e2bcae">
+
 Use the syntax `{i18n:Translate KeywordForTranslatedString}` to dynamically refresh the translated string when the app's language culture is changed.
 
 ### Csharp/CodeBehind translation
 
 Use the syntax `i18n.Content.KeywordForTranslatedString` to statically load the translation when the page or view is generated.
+<img width="404" alt="image" src="https://github.com/guibros/HopTest/assets/116329812/b18d408c-4fd3-4ceb-a6c3-e4166b4a9b1e">
+
 
 ## Changing App Language
 
